@@ -1,0 +1,22 @@
+# 기본 port 설정
+server:
+  port: 8080
+
+# database 연동 설정
+spring:
+  datasource:
+    username: user_ggramgyo
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url : jdbc:mysql://localhost:3306/projectdb
+
+  thymeleaf:
+    cache: false
+
+  # spring data jpa 설정
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: create
