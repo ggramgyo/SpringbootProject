@@ -67,4 +67,8 @@ public class MemberService {
         // id가 존재하지 않다면 create 하지만 이미 존재한다면 update
         memberRepository.save(MemberEntity.toUpdateMemberEntity(memberDTO));
     }
+
+    public void deleteById(Long id) {
+        memberRepository.deleteById(id);
+    }
 }
